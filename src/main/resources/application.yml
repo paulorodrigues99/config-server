@@ -1,0 +1,22 @@
+info:
+  component: Config Server
+
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: ${GIT_DEVELOPMENT_REPO:http://git.dev.sicoobpr.com.br/configuration/config-development.git}
+          username: ${GIT_USER:docker}
+          password: ${GIT_PASSWORD:Sicoob2009}
+          repos:
+            production:
+              pattern:
+                - "*/staging"
+                - "*/production"
+              uri: ${GIT_PRODUCTION_REPO:http://git.dev.sicoobpr.com.br/configuration/config-production.git}
+              username: ${GIT_USER:docker}
+              password: ${GIT_PASSWORD:Sicoob2009}
+
+server:
+  port: 8080
