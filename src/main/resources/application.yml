@@ -1,3 +1,6 @@
+server:
+  port: ${PORT:8080}
+
 info:
   component: Config Server
 
@@ -17,6 +20,3 @@ spring:
               uri: ${GIT_PRODUCTION_REPO:http://git.dev.sicoobpr.com.br/configuration/config-production.git}
               username: ${GIT_USER:docker}
               password: ${GIT_PASSWORD:Sicoob2009}
-
-server:
-  port: 8080
