@@ -9,14 +9,6 @@ spring:
     config:
       server:
         git:
-          uri: ${GIT_DEVELOPMENT_REPO:http://git.dev.sicoobpr.com.br/configuration/config-development.git}
+          uri: ${GIT_REPO:http://git.dev.sicoobpr.com.br/infrastructure/configuration.git}
           username: ${GIT_USER:docker}
           password: ${GIT_PASSWORD:Sicoob2009}
-          repos:
-            production:
-              pattern:
-                - "*/staging"
-                - "*/production"
-              uri: ${GIT_PRODUCTION_REPO:http://git.dev.sicoobpr.com.br/configuration/config-production.git}
-              username: ${GIT_USER:docker}
-              password: ${GIT_PASSWORD:Sicoob2009}
