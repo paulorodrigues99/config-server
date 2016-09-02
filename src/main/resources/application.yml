@@ -9,6 +9,4 @@ spring:
     config:
       server:
         git:
-          uri: ${GIT_REPO:http://git.dev.sicoobpr.com.br/infrastructure/configuration.git}
-          username: ${GIT_USER:docker}
-          password: ${GIT_PASSWORD:Sicoob2009}
+          uri: ${GIT_REPO:/git/configuration.git}
