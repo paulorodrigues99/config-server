@@ -2,11 +2,15 @@ server:
   port: ${PORT:8888}
 
 info:
-  component: Config Server
+  component: config-server
 
 spring:
   cloud:
     config:
       server:
         git:
-          uri: ${GIT_REPO:/git/configuration.git}
+          uri: ${GIT_REPO:https://github.com/thbono/apps-config.git}
+
+management:
+  security:
+    enabled: false
